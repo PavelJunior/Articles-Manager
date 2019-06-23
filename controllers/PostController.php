@@ -123,4 +123,15 @@ class PostController extends BaseController
 			'textError' => $errors['text'][0] ?? null
 		]);
 	}
+
+	public function deleteAction($id){
+
+        $mPost = new PostModel(
+            new DBDriver(DBConnector::getConnect()),
+            new Validator()
+        );
+
+        $mPost->delete($id);
+        $this->redirect(ROOT);
+    }
 }

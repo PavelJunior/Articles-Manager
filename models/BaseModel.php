@@ -52,4 +52,9 @@ abstract class BaseModel
 		
 		return $this->db->update($this->table, $params, $where);
 	}
+
+	public function delete($id){
+	    $sql = sprintf('DELETE FROM %s WHERE id = :id', $this->table);
+        return $this->db->select($sql, ['id' => $id], DBDriver::FETCH_ONE);
+    }
 }

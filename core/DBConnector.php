@@ -18,6 +18,6 @@ class DBConnector
 	public static function getPDO()
 	{
 		$dsn = sprintf('%s:host=%s;dbname=%s', 'mysql', 'localhost', 'php2');
-		return new \PDO($dsn, 'root', '');
+		return new \PDO($dsn, 'root', 'root');
 	}
 }

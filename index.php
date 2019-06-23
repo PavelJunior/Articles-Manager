@@ -10,7 +10,7 @@ function __autoload($classname) {
 
 session_start();
 
-define('ROOT', '//localhost/php2/8les/2/');
+define('ROOT', 'http://localhost:8888/article-manager/');
 
 $uri = $_GET['php2chpu'];
 
